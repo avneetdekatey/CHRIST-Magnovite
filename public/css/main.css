@@ -30,6 +30,12 @@
 	font-style: normal
 }
 
+@font-face {
+	font-family: 'DOS';
+	src: url("fonts/Perfect DOS VGA 437.ttf");
+	font-weight: 300;
+	font-style: normal
+}
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
@@ -279,7 +285,7 @@ body {
 }
 
 body {
-    background-image: url("../images/bg.png");
+	background-image: url("../images/bg_mag_21.jpg");
     background-repeat: no-repeat;
   	background-size: cover;
 	background-color:black;
@@ -339,7 +345,7 @@ body {
 	height : 140%;
 	width: 20%;
 	position: absolute;
-	top: 15%; 
+	top: 15%;
 	left: -4.5%;
 }
 
@@ -592,7 +598,7 @@ body {
 	}
 }
 .header--cta {
-	
+
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	padding: 0 20px;
@@ -614,7 +620,7 @@ body {
 }
 
 .header--cta.is-active {
-	
+
 	opacity: 1;
 	visibility: visible;
 	-webkit-transition: opacity .4s ease-in-out .4s;
@@ -628,12 +634,13 @@ body {
 }
 
 .side-nav {
+	color: #FFBB18
 	position: relative;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	width: 100px;
+	width: 180px;
 	height: 70%;
 	max-height: 750px;
 	-webkit-box-orient: vertical;
@@ -670,12 +677,19 @@ body {
 }
 
 .side-nav>li::before {
+	color: #FFBB18
 	position: absolute;
 	top: 3px;
 	left: 10px;
 	color:darkgrey;
-	font-size: 14px;
+	font-size: 38px;
 	font-weight: 300
+}
+
+.side-nav li::before{
+	font-weight: 800;
+	font-size: 16px;
+	color: #FFBB18;
 }
 
 .side-nav li:nth-child(1)::before {
@@ -715,7 +729,7 @@ body {
 }
 
 .side-nav li.is-active::before {
-	color: #fff
+	color: #FFBB18
 }
 .home-nav{
 	animation: none !important;
@@ -795,7 +809,7 @@ body {
 	left: 23px;
 	right: 0;
 	height: 100%;
-	background-color: darkred;
+	background-color: #FFBB18;
 	z-index: -1;
 	-webkit-transition: left .2s ease-in-out;
 	transition: left .2s ease-in-out
@@ -816,7 +830,25 @@ body {
 	fill: #fff
 }
 
-.intro--banner img {
+@media screen and  (min-width:800px) {
+	.mag-custom-logo {
+		margin-top: 30px;
+		margin-bottom:80px; 
+		display: block !important; 
+		position: static; 
+		width: 50%;
+	}
+}
+
+@media screen and  (max-width:799px) {
+	.mag-custom-logo { 
+		display: block !important; 
+		position: static; 
+		width: 50%;
+	}
+}
+
+.intro--banner .banner-img {
 	position: absolute;
 	bottom: 21px;
 	right: -12px
@@ -881,7 +913,7 @@ body {
 	padding: 1em;
 	text-transform: uppercase;
   }
-  
+
 .cli > span {
 	text-align: center;
 	display: block;
@@ -892,14 +924,14 @@ body {
 		position: absolute!important;
 		top: 18%!important;
 		right: 0%;
-	}	
+	}
 }
 @media(max-width:1440px){
 	.timer{
 		position: absolute!important;
 		top: 18%!important;
 		right: -13%;
-	}	
+	}
 }
 @media (max-width: 900px) {
 	.intro--banner {
@@ -983,7 +1015,7 @@ body {
 		font-size: 10px;
 		padding: 1em;
 	  }
-	  
+
 	.cli > span {
 		font-size: 15px;
 	}
@@ -1677,7 +1709,7 @@ body {
 		left: -10% !important;
 		font-size: 12px !important;
 	}
-	
+
 	.contact--lockup .modal{
 		padding-top: 5% !important;
 		padding: 0px;
@@ -1698,7 +1730,7 @@ body {
 		top: 5% !important;
 		left: 0%;
 	}
-	
+
 }
 .contact--lockup .modal--options a {
 	display: block;
@@ -2187,12 +2219,12 @@ body {
 	position: absolute;
 	top: 15%;
 	left: -22%;
-	overflow-x: hidden!important; 
-    overflow-y: scroll!important; 
+	overflow-x: hidden!important;
+    overflow-y: scroll!important;
 }
-#gal::-webkit-scrollbar { 
-	display: none!important; 
-} 
+#gal::-webkit-scrollbar {
+	display: none!important;
+}
 
 #gal_button {
 	position: absolute;
@@ -2234,9 +2266,9 @@ body {
 
 .magn {
 	height: 120%;
-	width: 80%;
-	left: 50% !important;
-	top: 5% !important;
+	width: 60%;
+    left: 62% !important;
+    top: 27% !important;
 }
 
 @keyframes blinker {
@@ -2278,4 +2310,9 @@ body {
 		left: 55% !important;
 		top: 20% !important;
 	}
+}
+
+.dos-font {
+	font-family: DOS;
+    font-variant-caps: all-petite-caps;
 }
